@@ -1,0 +1,301 @@
+[
+    {
+        "id": "app000",
+        "name": "Programming Hero",
+        "developer": "Programming Hero Ltd.",
+        "thumbnail": "https://d3lhjpscbhcyrv.cloudfront.net/thumbnail.png",
+        "banner": "https://d3lhjpscbhcyrv.cloudfront.net/thumbnail.png",
+        "downloads": 3500000,
+        "category": "Education",
+        "rating": 4.8,
+        "description": "Programming Hero is a fun and interactive way to learn programming. Whether you're a beginner or looking to brush up your skills, this app makes learning to code exciting and practical.",
+        "features": [
+            "Interactive coding lessons",
+            "Real-world projects",
+            "Gamified learning experience"
+        ],
+        "reviews": [
+            {
+                "user": "coder_nadia",
+                "rating": 5,
+                "comment": "Best app for beginners! The lessons are super easy to follow and engaging."
+            }
+        ]
+    },
+    {
+        "id": "app001",
+        "name": "TaskMaster Pro",
+        "developer": "Efficient Apps Inc.",
+        "thumbnail": "https://www.taskmasterpro.com/wp-content/uploads/2023/12/Group-142-1.png",
+        "banner": "https://www.taskmasterpro.com/wp-content/uploads/2023/12/Group-142-1.png",
+        "downloads": 1500000,
+        "category": "Productivity",
+        "rating": 4.5,
+        "description": "TaskMaster Pro helps you organize your tasks efficiently with intuitive design and powerful features.",
+        "features": [
+            "Smart task scheduling",
+            "Real-time collaboration",
+            "Customizable reminders"
+        ],
+        "reviews": [
+            {
+                "user": "productivity_guru",
+                "rating": 5,
+                "comment": "This app transformed the way I manage my daily tasks!"
+            }
+        ]
+    },
+    {
+        "id": "app002",
+        "name": "FocusTime",
+        "developer": "Mindful Tech",
+        "thumbnail": "https://i.ibb.co.com/2Y7vctV7/02.png",
+        "banner": "https://i.ibb.co.com/2Y7vctV7/02.png",
+        "downloads": 800000,
+        "category": "Productivity",
+        "rating": 4.7,
+        "description": "Boost your productivity by managing your time effectively using the Pomodoro technique.",
+        "features": [
+            "Customizable focus sessions",
+            "Detailed productivity reports",
+            "Distraction blocking"
+        ],
+        "reviews": [
+            {
+                "user": "time_saver",
+                "rating": 4,
+                "comment": "Great for staying focused during work hours."
+            }
+        ]
+    },
+    {
+        "id": "app003",
+        "name": "NoteWise",
+        "developer": "SmartNotes LLC",
+        "thumbnail": "https://i.ibb.co.com/9mVHpHX3/03-1.png",
+        "banner": "https://i.ibb.co.com/XxVQMrg5/03-2.png",
+        "downloads": 1200000,
+        "category": "Productivity",
+        "rating": 4.6,
+        "description": "Capture your thoughts and ideas seamlessly with NoteWise's intuitive note-taking features.",
+        "features": [
+            "Rich text formatting",
+            "Cloud synchronization",
+            "Organizable notebooks"
+        ],
+        "reviews": [
+            {
+                "user": "note_taker",
+                "rating": 5,
+                "comment": "The best note-taking app I've used so far!"
+            }
+        ]
+    },
+    {
+        "id": "app004",
+        "name": "Galaxy Invaders",
+        "developer": "Space Games Studio",
+        "thumbnail": "https://i.ibb.co.com/rCbTyxq/04.png",
+        "banner": "https://i.ibb.co.com/rCbTyxq/04.png",
+        "downloads": 5000000,
+        "category": "Gaming",
+        "rating": 4.8,
+        "description": "Defend the galaxy from alien invaders in this action-packed space shooter game.",
+        "features": [
+            "Multiple game modes",
+            "Upgradeable weapons",
+            "Online leaderboards"
+        ],
+        "reviews": [
+            {
+                "user": "space_cadet",
+                "rating": 5,
+                "comment": "Addictive gameplay and stunning graphics!"
+            }
+        ]
+    },
+    {
+        "id": "app005",
+        "name": "Puzzle Quest",
+        "developer": "Brainy Games",
+        "thumbnail": "https://i.ibb.co/placeholder/puzzle-quest-thumb.jpg",
+        "banner": "https://i.ibb.co/placeholder/puzzle-quest-banner.jpg",
+        "downloads": 2000000,
+        "category": "Gaming",
+        "rating": 4.4,
+        "description": "Challenge your mind with a variety of puzzles and brain teasers.",
+        "features": [
+            "Hundreds of levels",
+            "Daily challenges",
+            "Hints and tips"
+        ],
+        "reviews": [
+            {
+                "user": "puzzle_master",
+                "rating": 4,
+                "comment": "Great variety of puzzles to keep you engaged."
+            }
+        ]
+    },
+    {
+        "id": "app006",
+        "name": "Racing Thunder",
+        "developer": "FastTrack Studios",
+        "thumbnail": "https://i.ibb.co/placeholder/racing-thunder-thumb.jpg",
+        "banner": "https://i.ibb.co/placeholder/racing-thunder-banner.jpg",
+        "downloads": 3000000,
+        "category": "Gaming",
+        "rating": 4.6,
+        "description": "Experience high-speed racing with realistic physics and stunning visuals.",
+        "features": [
+            "Multiple car models",
+            "Dynamic weather conditions",
+            "Online multiplayer"
+        ],
+        "reviews": [
+            {
+                "user": "speed_freak",
+                "rating": 5,
+                "comment": "Best racing game on mobile!"
+            }
+        ]
+    },
+    {
+        "id": "app007",
+        "name": "LearnLang",
+        "developer": "EduTech Corp.",
+        "thumbnail": "https://i.ibb.co/placeholder/learnlang-thumb.jpg",
+        "banner": "https://i.ibb.co/placeholder/learnlang-banner.jpg",
+        "downloads": 2500000,
+        "category": "Education",
+        "rating": 4.9,
+        "description": "Master new languages with interactive lessons and real-life conversations.",
+        "features": [
+            "Speech recognition",
+            "Daily practice reminders",
+            "Cultural notes"
+        ],
+        "reviews": [
+            {
+                "user": "language_lover",
+                "rating": 5,
+                "comment": "Makes language learning fun and easy!"
+            }
+        ]
+    },
+    {
+        "id": "app008",
+        "name": "Math Genius",
+        "developer": "SmartKids Inc.",
+        "thumbnail": "https://i.ibb.co/placeholder/math-genius-thumb.jpg",
+        "banner": "https://i.ibb.co/placeholder/math-genius-banner.jpg",
+        "downloads": 1000000,
+        "category": "Education",
+        "rating": 4.7,
+        "description": "Enhance your math skills with engaging exercises and quizzes.",
+        "features": [
+            "Grade-wise content",
+            "Progress tracking",
+            "Interactive games"
+        ],
+        "reviews": [
+            {
+                "user": "math_whiz",
+                "rating": 4,
+                "comment": "Great app for kids to practice math."
+            }
+        ]
+    },
+    {
+        "id": "app009",
+        "name": "History Explorer",
+        "developer": "EduWorld",
+        "thumbnail": "https://i.ibb.co/placeholder/history-explorer-thumb.jpg",
+        "banner": "https://i.ibb.co/placeholder/history-explorer-banner.jpg",
+        "downloads": 750000,
+        "category": "Education",
+        "rating": 4.5,
+        "description": "Travel through time and learn about significant historical events.",
+        "features": [
+            "Timeline navigation",
+            "Interactive maps",
+            "Quizzes and flashcards"
+        ],
+        "reviews": [
+            {
+                "user": "history_buff",
+                "rating": 5,
+                "comment": "A must-have for history enthusiasts!"
+            }
+        ]
+    },
+    {
+        "id": "app010",
+        "name": "FitLife",
+        "developer": "HealthFirst",
+        "thumbnail": "https://i.ibb.co/placeholder/fitlife-thumb.jpg",
+        "banner": "https://i.ibb.co/placeholder/fitlife-banner.jpg",
+        "downloads": 1800000,
+        "category": "Health & Fitness",
+        "rating": 4.8,
+        "description": "Achieve your fitness goals with personalized workout plans and tracking.",
+        "features": [
+            "Custom workout routines",
+            "Dietary recommendations",
+            "Progress monitoring"
+        ],
+        "reviews": [
+            {
+                "user": "fitness_fanatic",
+                "rating": 5,
+                "comment": "Helped me stay on track with my fitness journey!"
+            }
+        ]
+    },
+    {
+        "id": "app011",
+        "name": "MindRelax",
+        "developer": "Wellness Apps",
+        "thumbnail": "https://i.ibb.co/placeholder/mindrelax-thumb.jpg",
+        "banner": "https://i.ibb.co/placeholder/mindrelax-banner.jpg",
+        "downloads": 900000,
+        "category": "Health & Fitness",
+        "rating": 4.6,
+        "description": "Reduce stress and improve sleep with guided meditations and calming sounds.",
+        "features": [
+            "Sleep stories",
+            "Breathing exercises",
+            "Mood tracking"
+        ],
+        "reviews": [
+            {
+                "user": "calm_seeker",
+                "rating": 4,
+                "comment": "Great app for relaxation and mindfulness."
+            }
+        ]
+    },
+    {
+        "id": "app012",
+        "name": "YogaFlow",
+        "developer": "Zen Studios",
+        "thumbnail": "https://i.ibb.co/placeholder/yogaflow-thumb.jpg",
+        "banner": "https://i.ibb.co/placeholder/yogaflow-banner.jpg",
+        "downloads": 1100000,
+        "category": "Health & Fitness",
+        "rating": 4.9,
+        "description": "Practice yoga anytime, anywhere with guided sessions for all levels.",
+        "features": [
+            "Beginner to advanced classes",
+            "Pose library",
+            "Daily reminders"
+        ],
+        "reviews": [
+            {
+                "user": "yoga_enthusiast",
+                "rating": 5,
+                "comment": "Excellent app for daily yoga practice!"
+            }
+        ]
+    }
+]
