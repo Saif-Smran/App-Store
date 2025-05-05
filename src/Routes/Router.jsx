@@ -3,6 +3,7 @@ import MainLayout from "../Layouts/MainLayout";
 import Error from "../Pages/Error";
 import Home from "../Pages/Home";
 import Loading from "../Components/Loading";
+import AppDetails from "../Pages/AppDetails";
 
 
 
@@ -15,14 +16,20 @@ const Router = createBrowserRouter([
                 path: '/',
                 element: <Home></Home>,
                 loader: () => fetch('/appData.json'),
-                hydrateFallbackElement: <Loading></Loading>
-            }
+                hydrateFallbackElement: <Loading></Loading>,
+            },
+            {
+                path: '/appDetails/:id',
+                element: <AppDetails></AppDetails>,
+                loader: () => fetch('/appData.json'),
+                hydrateFallbackElement: <Loading></Loading>,
+            },
         ]
     },
     {
         path: '/*',
         element: <Error></Error>,
-    }
+    },
 ])
 
 export default Router;

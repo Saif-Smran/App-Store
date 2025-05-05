@@ -1,47 +1,38 @@
 import React from "react";
 import { FaStar, FaDownload } from "react-icons/fa";
+import { Link } from "react-router";
 
-const AppCard = ({ app }) => {
+const TrendingCard = ({ app }) => {
+    console.log(app);
+
     return (
-        <div className="card lg:card-side bg-base-200 shadow-xl border border-gray-200">
-            {/* Thumbnail */}
-            <figure className="w-full lg:w-1/3 p-4">
-                <img src={app.thumbnail} alt={app.name} className="rounded-xl w-full h-auto object-cover" />
-            </figure>
+        <Link to={`/appDetails/${app?.id}`} className="w-full">
+            <div className="card bg-base-300 shadow-md flex flex-row items-center p-4 gap-4 w-full max-w-md">
+                {/* App Image */}
+                <figure className="w-24 h-24 rounded overflow-hidden">
+                    <img src={app?.thumbnail} alt={app?.name} className="object-cover bg-black w-full h-full" />
+                </figure>
 
-            {/* App Details */}
-            <div className="card-body w-full lg:w-2/3">
-                {/* Name */}
-                <h2 className="card-title text-2xl font-semibold">{app.name}</h2>
+                {/* App Info */}
+                <div className="flex flex-col justify-between flex-1">
+                    {/* Name */}
+                    <h2 className="text-lg font-semibold">{app?.name}</h2>
 
-                {/* Description */}
-                <p className="text-base text-gray-700">
-                    {app.description}
-                </p>
-
-                {/* Features */}
-                <ul className="list-disc list-inside text-sm text-gray-600 mt-2">
-                    {app.features.map((feature, index) => (
-                        <li key={index}>{feature}</li>
-                    ))}
-                </ul>
-
-                {/* Ratings & Downloads */}
-                <div className="mt-4 flex gap-4 items-center">
-                    <div className="flex items-center gap-2 text-yellow-500">
-                        <FaStar />
-                        <span className="font-medium text-gray-800">{app.rating}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-blue-500">
-                        <FaDownload />
-                        <span className="font-medium text-gray-800">
-                            {(app.downloads / 1000000).toFixed(1)}M+
-                        </span>
+                    {/* Ratings & Downloads */}
+                    <div className="flex items-center justify-between text-sm text-gray-600 mt-2">
+                        <div className="flex items-center gap-1">
+                            <FaStar className="text-yellow-400" />
+                            <span>{app?.rating}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                            <FaDownload className="text-blue-500" />
+                            <span>{(app?.downloads / 1000000).toFixed(1)}M+</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
-export default AppCard;
+export default TrendingCard;
