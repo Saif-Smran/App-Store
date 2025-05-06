@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaDownload, FaStar } from "react-icons/fa";
 import { RiUninstallLine } from 'react-icons/ri';
 import { useLoaderData, useParams } from 'react-router';
 import CommentBox from '../Components/CommentBox';
+import ReviewCard from '../Components/ReviewCard';
 
 const AppDetails = () => {
 
     const [install, setInstall] = useState(false)
     const [comment, setComment] = useState(false)
+    const [reviews, setReviews] = useState([])
     const { id } = useParams()
     const data = useLoaderData()
     const app = data.find(app => app.id === id)
@@ -15,10 +17,25 @@ const AppDetails = () => {
 
     const handleInstall = () => {
         setInstall(!install)
-        if (comment == false){
+        if (comment == false) {
             setComment(true)
         }
     }
+
+    useEffect(() => {
+        if (app?.reviews?.length) {
+            const formattedReviews = app.reviews.map((rev) => ({
+                review: {
+                    rating: rev.rating,
+                    comment: rev.comment
+                },
+                userImg: app.thumbnail,
+                name: rev.user,
+                date: 'May 4, 2025' // You can make this dynamic later
+            }));
+            setReviews(formattedReviews);
+        }
+    }, [app]);
 
     return (
         <div className="bg-base-200">
@@ -85,7 +102,15 @@ const AppDetails = () => {
                 </div>
 
                 {/* Comment Box */}
-                <CommentBox comment = {comment}></CommentBox>
+                <CommentBox comment={comment}></CommentBox>
+
+                {/* Review Card */}
+
+                <div className="bg-base-300 rounded-lg space-y-4 mt-6">
+                    {reviews.map((reviewObj, index) => (
+                        <ReviewCard key={index} ReviewObj={reviewObj} />
+                    ))}
+                </div>
 
             </div>
         </div>
