@@ -4,6 +4,10 @@ import Error from "../Pages/Error";
 import Home from "../Pages/Home";
 import Loading from "../Components/Loading";
 import AppDetails from "../Pages/AppDetails";
+import AuthLayout from "../Layouts/AuthLayout";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
+import PrivateRout from "../Provider/PrivateRout";
 
 
 
@@ -20,10 +24,26 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/appDetails/:id',
-                element: <AppDetails></AppDetails>,
+                element: <PrivateRout>
+                    <AppDetails></AppDetails>
+                </PrivateRout>,
                 loader: () => fetch('/appData.json'),
                 hydrateFallbackElement: <Loading></Loading>,
             },
+        ]
+    },
+    {
+        path: '/auth',
+        element: <AuthLayout></AuthLayout>,
+        children: [
+            {
+                path: '/auth/login',
+                element: <Login></Login>,
+            },
+            {
+                path: '/auth/register',
+                element: <Register></Register>
+            }
         ]
     },
     {

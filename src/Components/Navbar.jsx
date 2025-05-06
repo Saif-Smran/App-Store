@@ -40,7 +40,7 @@ const Navbar = () => {
                             <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
                         </div>
                     </div>
-                    <Link to='/login' className='btn btn-dash btn-secondary text-lg'>Login</Link>
+                    <Link to='/auth/login' className='btn btn-dash btn-secondary text-lg'>Login</Link>
                 </div>
             </div>
         </div>
