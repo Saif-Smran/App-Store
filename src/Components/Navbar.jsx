@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { use } from 'react';
 import logo from '../assets/Logo-2.png'
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useLocation } from 'react-router';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Navbar = () => {
+
+    const { user, Logout } = use(AuthContext)
+
+    console.log(user, 'user in navbar');
+
+    const location = useLocation()
+
+    const handleLogout = () => {
+        Logout()
+            .then(() => {
+                alert('Logout successful')
+                console.log('Logout successful')
+            })
+            .catch((error) => {
+                alert('Logout error')
+                console.error('Logout error:', error)
+            })
+    }
 
     const Links = <>
         <NavLink to='/' className='mr-4 btn btn-dash btn-primary text-lg'>Apps</NavLink>
@@ -35,12 +54,18 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end flex gap-2 items-center">
-                    <div className="avatar">
-                        <div className="w-15 rounded-full">
-                            <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
-                        </div>
-                    </div>
-                    <Link to='/auth/login' className='btn btn-dash btn-secondary text-lg'>Login</Link>
+
+                    {
+                        user ? <>
+                            <div className="avatar">
+                                <div className="w-15 rounded-full">
+                                    <img src={user?.photoURL} />
+                                </div>
+                            </div>
+                            <button onClick={handleLogout} className='btn btn-dash btn-secondary px-10'>Log Out</button>
+                        </> :
+                            <Link state={location.pathname} to='/auth/login' className='btn btn-dash btn-secondary text-lg'>Login</Link>
+                    }
                 </div>
             </div>
         </div>

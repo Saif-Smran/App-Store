@@ -31,13 +31,14 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        // console.log(name, photo, email, password);
-
+        console.log(name, photo, email, password);
+        console.log(CreatUser, setUser, updateUder);
+        
         CreatUser(email, password)
             .then((res) => {
                 // Signed up 
                 const user = res.user;
-                // console.log(user);
+                console.log(user);
 
                 updateUder({ displayName: name, photoURL: photo })
                     .then(() => {
