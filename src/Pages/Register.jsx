@@ -2,6 +2,7 @@ import React, { use, useState } from 'react';
 import { FaUser, FaImage, FaEnvelope, FaLock } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
+import { FcGoogle } from 'react-icons/fc';
 
 
 const Register = () => {
@@ -64,7 +65,7 @@ const Register = () => {
     }
 
     return (
-        <div className="min-h-[80vh] flex items-center justify-center bg-base-200 px-4">
+        <div className="min-h-screen flex items-center justify-center bg-base-200 px-4">
             <div className="w-full max-w-md bg-white dark:bg-base-100 rounded-lg shadow-lg p-8 space-y-6">
                 <h2 className="text-2xl font-bold text-center">Register your account</h2>
                 <form onSubmit={handleRegister} className="space-y-4">
@@ -168,6 +169,13 @@ const Register = () => {
                     {/* Submit */}
                     <button type="submit" className="btn btn-neutral w-full">
                         Register
+                    </button>
+
+                    <div className="divider">OR</div>
+
+                    <button className="btn btn-dash w-full flex items-center justify-center gap-2">
+                        <FcGoogle size={20} />
+                        Sign in with Google
                     </button>
 
                     <p className="text-center font-bold text-sm text-gray-500 mt-2">
