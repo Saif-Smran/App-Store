@@ -5,20 +5,38 @@ import Rating from '@mui/material/Rating';
 import { Typography } from "@mui/material";
 import { use } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import { format } from 'date-fns';
 
-const CommentBox = ({comment}) => {
+
+const CommentBox = ({ comment, setReviews }) => {
     const [commen, setCommen] = useState("");
     const [value, setValue] = useState(2);
     // console.log(comment);
-    
+
 
     const { user } = use(AuthContext)
+    console.log(user, 'user in comment box');
+    
 
     const handleSubmit = () => {
         if (commen.trim()) {
             console.log("Submitted commen:", commen, "Rating:", value, 'Name:', user?.displayName);
+
+            const formatted = {
+                review: {
+                    rating: value,
+                    comment: commen
+                },
+                userImg: user?.photoURL, // or a user-specific image if available
+                name: user?.displayName,
+                date: format(new Date(), 'MMM d, yyyy')  // e.g., May 5, 2025
+            };
+            setReviews(prev => [...prev, formatted]);
+
+
             setValue(2); // Reset rating to default value (2 in this case)
             setCommen("");
+
         }
     };
 
@@ -46,7 +64,7 @@ const CommentBox = ({comment}) => {
                 <button
                     onClick={handleSubmit}
                     className={`btn btn-primary flex items-center gap-2 disabled:bg-gray-400 disabled:cursor-not-allowed ${comment ? "" : "btn-disabled"}`}
-                    
+
                 >
                     <FaPaperPlane /> Submit
                 </button>

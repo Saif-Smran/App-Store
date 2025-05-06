@@ -102,11 +102,11 @@ const AppDetails = () => {
                 </div>
 
                 {/* Comment Box */}
-                <CommentBox comment={comment}></CommentBox>
+                <CommentBox comment={comment} setReviews = {setReviews} ></CommentBox>
 
                 {/* Review Card */}
 
-                <div className="bg-base-300 rounded-lg space-y-4 mt-6">
+                <div className="rounded-lg space-y-4 mt-6">
                     {reviews.map((reviewObj, index) => (
                         <ReviewCard key={index} ReviewObj={reviewObj} />
                     ))}

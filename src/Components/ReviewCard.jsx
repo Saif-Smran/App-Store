@@ -22,7 +22,7 @@ const ReviewCard = ({ ReviewObj }) => {
     };
 
     return (
-        <div className=" mx-auto rounded-lg p-5 mb-5 space-y-4">
+        <div className=" mx-auto bg-base-300 rounded-lg p-5 mb-5 space-y-4">
             {/* Header */}
             <div className="flex items-center gap-4">
                 <img
