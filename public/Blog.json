@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "question": "How do app ratings influence downloads in an online app store?",
+      "answer": "App ratings play a critical role in user trust and visibility. Higher-rated apps often appear at the top of search results and category lists, increasing their chances of being downloaded. Users typically prefer apps with ratings above 4.0 and visible positive reviews."
+    },
+    {
+      "id": 2,
+      "question": "What should developers focus on to improve their app’s visibility?",
+      "answer": "To boost visibility, developers should focus on optimizing the app title and description with relevant keywords, using high-quality screenshots, collecting positive user reviews, and regularly updating the app. These practices help improve search rankings and user trust."
+    },
+    {
+      "id": 3,
+      "question": "How important are user reviews for app store success?",
+      "answer": "User reviews are essential for building credibility. They provide social proof that the app works as expected and highlight its strengths or weaknesses. Apps with detailed and frequent reviews tend to attract more downloads and retain users better."
+    },
+    {
+      "id": 4,
+      "question": "What are featured apps and how can one get featured?",
+      "answer": "Featured apps are highlighted by the app store editors for quality, innovation, or popularity. To get featured, an app should have excellent design, positive reviews, good performance, and follow app store guidelines strictly. Being featured can significantly increase visibility and downloads."
+    },
+    {
+      "id": 5,
+      "question": "Why do some apps require frequent updates in app stores?",
+      "answer": "Frequent updates help maintain compatibility with new devices, fix bugs, improve performance, and introduce new features. Regular updates also signal to users and the app store that the app is actively maintained, which can boost trust and ranking."
+    }
+  ]
+  

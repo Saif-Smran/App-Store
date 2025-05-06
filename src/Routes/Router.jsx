@@ -8,6 +8,7 @@ import AuthLayout from "../Layouts/AuthLayout";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivateRout from "../Provider/PrivateRout";
+import Blog from "../Pages/Blog";
 
 
 
@@ -29,7 +30,13 @@ const Router = createBrowserRouter([
                 </PrivateRout>,
                 loader: () => fetch('/appData.json'),
                 hydrateFallbackElement: <Loading></Loading>,
-            },
+                errorElement: <Error></Error>,
+            },{
+                path: '/blog',
+                element: <Blog></Blog>,
+                loader: () => fetch('/Blog.json'),
+                hydrateFallbackElement: <Loading></Loading>,
+            }
         ]
     },
     {

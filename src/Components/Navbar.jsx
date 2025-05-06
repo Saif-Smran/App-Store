@@ -26,6 +26,7 @@ const Navbar = () => {
     const Links = <>
         <NavLink to='/' className='mr-4 btn btn-dash btn-primary text-lg'>Apps</NavLink>
         <NavLink to='/my-profile' className='mr-4 btn btn-dash btn-primary text-lg'>My Profile</NavLink>
+        <NavLink to='/blog' className='mr-4 btn btn-dash btn-primary text-lg'>Blog</NavLink>
         {/* <li className='mr-4 cursor-pointer'>Item 3</li> */}
     </>
 
