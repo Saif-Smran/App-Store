@@ -3,6 +3,7 @@ import { FaUser, FaImage, FaEnvelope, FaLock } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import { FcGoogle } from 'react-icons/fc';
+import { Helmet } from 'react-helmet-async';
 
 
 const Register = () => {
@@ -67,6 +68,11 @@ const Register = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-base-200 px-4">
+            <Helmet>
+                <title>Register</title>
+                <meta name="description" content="Create a new account" />
+                <link rel="canonical" href="/auth/register" />
+            </Helmet>
             <div className="w-full max-w-md bg-white dark:bg-base-100 rounded-lg shadow-lg p-8 space-y-6">
                 <h2 className="text-2xl font-bold text-center">Register your account</h2>
                 <form onSubmit={handleRegister} className="space-y-4">

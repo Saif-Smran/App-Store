@@ -4,6 +4,7 @@ import { RiUninstallLine } from 'react-icons/ri';
 import { useLoaderData, useParams } from 'react-router';
 import CommentBox from '../Components/CommentBox';
 import ReviewCard from '../Components/ReviewCard';
+import { Helmet } from 'react-helmet-async';
 
 const AppDetails = () => {
 
@@ -39,6 +40,12 @@ const AppDetails = () => {
 
     return (
         <div className="bg-base-200">
+            <Helmet>
+                <title>{app.name} - Saif's App Store</title>
+                <meta name="description" content={`Details about ${app.name}`} />
+                <link rel="canonical" href={`/apps/${app.id}`} />
+                <meta property="og:title" content={`${app.name} - Saif's App Store`} />
+            </Helmet>
             <div className="w-11/12 mx-auto rounded-xl overflow-hidden ">
                 {/* Banner Image */}
                 <figure>

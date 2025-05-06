@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import Slider from '../Components/Slider';
 import AppCard from '../Components/AppCard';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
 
@@ -33,6 +34,11 @@ const Home = () => {
 
     return (
         <div className='popins w-11/12 mx-auto'>
+            <Helmet>
+                <title>Saif's App Store</title>
+                <meta name="description" content="Discover the best apps for your needs. From productivity to gaming, find top-rated applications here." />
+                <link rel="canonical" href="/" />
+            </Helmet>
             <section>
                 {/* Hero Section */}
                 <Slider slides={slides}></Slider>

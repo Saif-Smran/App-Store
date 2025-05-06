@@ -3,6 +3,7 @@ import { FaEnvelope, FaLock } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import { FcGoogle } from 'react-icons/fc';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -48,6 +49,11 @@ const Login = () => {
 
     return (
         <div className="h-[95vh] bg-base-200 flex items-center justify-center p-4">
+            <Helmet>
+                <title>Login</title>
+                <meta name="description" content="Login to your account" />
+                <link rel="canonical" href="/auth/login" />
+            </Helmet>
             <div className="card w-full max-w-sm bg-base-100 shadow-xl p-6">
                 <h2 className="text-2xl font-bold text-center text-base-content mb-4">
                     Login Your Account

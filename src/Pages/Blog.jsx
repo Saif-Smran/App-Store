@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useLoaderData } from 'react-router';
 
 const Blog = () => {
@@ -10,6 +11,11 @@ const Blog = () => {
 
     return (
         <div className='max-w-screen-xl mx-auto my-10 mb-20'>
+            <Helmet>
+                <title>Blogs</title>
+                <meta name="description" content="Blogs about web development, programming, and technology." />
+                <link rel="canonical" href="/blogs" />
+            </Helmet>
             <h1 className="text-5xl font-extrabold text-center">Blogs</h1>
             <div className='space-y-10 mt-10'>
                 {
