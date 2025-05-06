@@ -7,7 +7,7 @@ const Navbar = () => {
 
     const { user, Logout } = use(AuthContext)
 
-    console.log(user, 'user in navbar');
+    // console.log(user, 'user in navbar');
 
     const location = useLocation()
 

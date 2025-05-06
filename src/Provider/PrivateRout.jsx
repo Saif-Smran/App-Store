@@ -10,7 +10,7 @@ const PrivateRout = ({ children }) => {
     const location = useLocation()
 
 
-    console.log(user, 'user in private route', location);
+    // console.log(user, 'user in private route', location);
 
 
     // console.log(user);

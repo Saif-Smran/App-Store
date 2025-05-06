@@ -16,7 +16,7 @@ const Home = () => {
     const EducationApps = data.filter(app => app.category === 'Education')
     const Health_FitnessApps = data.filter(app => app.category === 'Health & Fitness')
 
-    const slides = ProductivityApps
+    const slides = trandingApps
 
     const getTopRatedApps = (apps, topN = 4) => {
         return apps

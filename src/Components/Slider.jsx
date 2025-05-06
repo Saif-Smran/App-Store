@@ -34,7 +34,7 @@ const Slider = ({ slides }) => {
                         className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-700 ease-in-out w-full ${index === current ? "opacity-100" : "opacity-0"
                             }`}
                     >
-                        <img src={slide?.thumbnail} alt={slide?.name} className="w-full object-cover" />
+                        <img src={slide?.banner} alt={slide?.name} className="w-full object-cover" />
                     </div>
                 ))}
             </div>
