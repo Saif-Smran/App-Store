@@ -3,6 +3,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 const Myprofile = () => {
     const { user, updateUder, setUser } = use(AuthContext)
@@ -39,6 +40,12 @@ const Myprofile = () => {
 
     return (
         <div className="h-[90vh] bg-base-200 flex items-center justify-center px-4 py-8">
+            <Helmet>
+                <title>Update Profile</title>
+                <meta name="description" content="Update your profile information" />
+                <meta name="keywords" content="profile, update, user" />
+                <meta name="author" content="Your Name" />
+            </Helmet>
             <div className="card w-full max-w-lg bg-base-100 shadow-xl p-6">
                 <h2 className="text-2xl font-bold mb-4 text-center">Update Profile</h2>
 

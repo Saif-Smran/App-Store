@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { Link } from 'react-router';
+import { Helmet } from 'react-helmet-async';
 
 const ShowProfile = () => {
 
@@ -9,6 +10,11 @@ const ShowProfile = () => {
 
     return (
         <div className="h-[90vh] flex items-center justify-center bg-base-200 px-4 py-10">
+            <Helmet>
+                <title>My Profile</title>
+                <meta name="description" content="User profile page" />
+                <meta name="keywords" content="profile, user, details" />
+            </Helmet>
             <div className="card w-full max-w-md bg-base-100 shadow-xl p-6 text-center space-y-6">
 
                 <div className="avatar justify-center">
