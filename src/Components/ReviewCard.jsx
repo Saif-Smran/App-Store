@@ -4,7 +4,7 @@ import { FaStar, FaRegStar, FaReply } from "react-icons/fa";
 const ReviewCard = ({ ReviewObj }) => {
 
     const { review, userImg, name, date} = ReviewObj
-    console.log(ReviewObj);
+    // console.log(ReviewObj);
     
 
     const renderStars = (rating) => {

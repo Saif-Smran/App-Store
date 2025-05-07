@@ -3,7 +3,7 @@ import { FaStar, FaDownload } from "react-icons/fa";
 import { Link } from "react-router";
 
 const TrendingCard = ({ app }) => {
-    console.log(app);
+    // console.log(app);
 
     return (
         <Link to={`/appDetails/${app?.id}`} className="w-full">

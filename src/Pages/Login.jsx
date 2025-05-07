@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet-async';
 const Login = () => {
 
 
-    const { setUser, login } = use(AuthContext)
+    const { setUser, login, googleLogin } = use(AuthContext)
     const location = useLocation()
 
     const [error, setError] = useState('')
@@ -44,6 +44,24 @@ const Login = () => {
                 console.log('Login failed', errorCode, errorMessage)
             })
 
+    }
+
+    const handleGoogleLogin = () => {
+        googleLogin()
+            .then((res) => {
+                const loggedUser = res.user
+                // console.log(loggedUser)
+                setUser(loggedUser)
+                alert('Login successful')
+                navigate(location?.state || '/')
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // alert('Login failed' ,errorCode, errorMessage)
+                setError('Invalid email or password')
+                console.log('Login failed', errorCode, errorMessage)
+            })
     }
 
 
@@ -108,7 +126,7 @@ const Login = () => {
 
                 <div className="divider">OR</div>
 
-                <button className="btn btn-dash w-full flex items-center justify-center gap-2">
+                <button onClick={handleGoogleLogin} className="btn btn-dash w-full flex items-center justify-center gap-2">
                     <FcGoogle size={20} />
                     Sign in with Google
                 </button>

@@ -15,7 +15,7 @@ const CommentBox = ({ comment, setReviews }) => {
 
 
     const { user } = use(AuthContext)
-    console.log(user, 'user in comment box');
+    // console.log(user, 'user in comment box');
     
 
     const handleSubmit = () => {
