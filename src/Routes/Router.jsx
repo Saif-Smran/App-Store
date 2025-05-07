@@ -9,6 +9,10 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivateRout from "../Provider/PrivateRout";
 import Blog from "../Pages/Blog";
+import ProfileLayout from "../Layouts/ProfileLayout";
+import ShowProfile from "../Pages/ShowProfile";
+import Myprofile from "../Pages/Myprofile";
+
 
 
 
@@ -31,12 +35,14 @@ const Router = createBrowserRouter([
                 loader: () => fetch('/appData.json'),
                 hydrateFallbackElement: <Loading></Loading>,
                 errorElement: <Error></Error>,
-            },{
+            }, 
+            {
                 path: '/blog',
                 element: <Blog></Blog>,
                 loader: () => fetch('/Blog.json'),
                 hydrateFallbackElement: <Loading></Loading>,
-            }
+            },
+           
         ]
     },
     {
@@ -50,6 +56,23 @@ const Router = createBrowserRouter([
             {
                 path: '/auth/register',
                 element: <Register></Register>
+            }
+        ]
+    },
+    {
+        path: '/my-profile',
+        element: <PrivateRout>
+            <ProfileLayout></ProfileLayout>
+        </PrivateRout>,
+        children:[
+            {
+                path: '/my-profile',
+                element: <ShowProfile></ShowProfile>,
+
+            },
+            {
+                path: '/my-profile/update',
+                element: <Myprofile></Myprofile>
             }
         ]
     },
