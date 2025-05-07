@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import { FcGoogle } from 'react-icons/fc';
 import { Helmet } from 'react-helmet-async';
+import Swal from 'sweetalert2';
 
 
 const Register = () => {
@@ -52,7 +53,13 @@ const Register = () => {
                         console.log('Error updating profile', error);
                         setUser(user)
                     })
-                alert('Registration successful!');
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Registration successful",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
                 navigate(location.state || '/')
                 // ...
             })
@@ -72,7 +79,13 @@ const Register = () => {
                 const loggedUser = res.user
                 // console.log(loggedUser)
                 setUser(loggedUser)
-                alert('Login successful')
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Registration successful",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
                 navigate(location?.state || '/')
             })
             .catch((error) => {

@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 import { FcGoogle } from 'react-icons/fc';
 import { Helmet } from 'react-helmet-async';
+import Swal from 'sweetalert2';
 
 
 
@@ -31,8 +32,13 @@ const Login = () => {
                 const loggedUser = res.user
                 // console.log(loggedUser)
                 setUser(loggedUser)
-                alert('Login successful')
-
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Login successful",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
                 navigate(location?.state || '/')
 
             })
@@ -52,7 +58,13 @@ const Login = () => {
                 const loggedUser = res.user
                 // console.log(loggedUser)
                 setUser(loggedUser)
-                alert('Login successful')
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Login successful",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
                 navigate(location?.state || '/')
             })
             .catch((error) => {
@@ -112,7 +124,6 @@ const Login = () => {
                             <span className="label-text">Remember me</span>
                         </label>
                     </div>
-
                     <button type="submit" className="btn btn-neutral w-full">
                         Sign In
                     </button>
@@ -125,7 +136,6 @@ const Login = () => {
                 </div>
 
                 <div className="divider">OR</div>
-
                 <button onClick={handleGoogleLogin} className="btn btn-dash w-full flex items-center justify-center gap-2">
                     <FcGoogle size={20} />
                     Sign in with Google

@@ -12,9 +12,10 @@ import { Link } from 'react-router';
 const Footer = () => {
     return (
         <div className='bg-neutral text-neutral-content popins'>
-            <footer className="footer p-10 mx-auto w-11/12 flex justify-between items-start">
+            <footer className="p-10 mx-auto w-11/12 flex flex-col md:flex-row md:justify-between md:items-start gap-10">
+
                 {/* Company Info with Logo */}
-                <aside>
+                <aside className="flex flex-col items-start">
                     <div className="flex items-center gap-4 mb-2">
                         <img
                             src={logo} // <-- Replace with your actual logo path
@@ -62,8 +63,10 @@ const Footer = () => {
                         </Link>
                     </div>
                 </nav>
+
             </footer>
         </div>
+
     );
 };
 
